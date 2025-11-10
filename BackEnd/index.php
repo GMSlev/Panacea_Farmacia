@@ -54,3 +54,23 @@ if(isset($_POST['usuario']) && isset($_POST['senha'])){
     
 </body>
 </html>
+
+
+
+// consulta de produtos 
+
+<?php
+include('conexão.php');
+
+$sql_produtos ="SELECT * FROM ... ORDER BY ... DESC";
+$result_produtos = $conecta->query ($sql_produtos);
+
+
+// consulta de funça
+
+$sql_funcionarios = " SELECT * FROM ... ORDER BY ... DESC";
+$result_funcionarios = $conecta ->query ($sql_funcionarios);
+?>
+
+// deixei algumas partes em branco para atualizar depois da criação do banco 
+
