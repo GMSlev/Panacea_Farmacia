@@ -1,15 +1,25 @@
-Farmácia Panácea — Sistema de Farmácia Online
-Projeto acadêmico que implementa a estrutura front-end de um sistema de e-commerce farmacêutico. Principais características:
+💾 Modelagem do Banco de Dados — [Panacea_Farmacia]
 
-HTML semântico e modular (header, nav, main, section, footer) para facilitar acessibilidade e SEO.
+Este repositório faz parte do projeto desenvolvido para a disciplina de [Projeto de Extensão em Programação. UNINOVE]. O objetivo é criar, estruturar e testar um banco de dados relacional utilizando MySQL, abordando desde a modelagem até consultas SQL práticas.
 
-Menu responsivo com comportamento adaptativo para diferentes larguras de tela.
+📚 Conteúdo
 
-Dropdowns dinâmicos de categorias (farmacêuticos, OTC, cosméticos, suplementos) preparados para ligação com dados dinâmicos.
+Scripts de criação de tabelas (schema.sql)
 
-Seções de produtos organizadas por categoria, com marcação pronta para cards de produto.
+Inserção e manipulação de dados (data.sql)
 
-Páginas institucionais “Sobre” e “Contato” com semântica adequada para formulários e microdados.
+Consultas e testes (queries.sql)
 
-Projeto preparado para integração com CSS (incluindo frameworks) e posterior implementação de JavaScript/Back-end (API de produtos, carrinho, autenticação, pagamentos).
-Boas práticas aplicadas: estrutura semântica, organização de arquivos, nomes de classes previsíveis e documentação mínima para continuidade do desenvolvimento.
+Documentação e anotações sobre o desenvolvimento
+
+🚀 Objetivo
+
+Aplicar conceitos de modelagem, normalização e manipulação de dados em SQL, preparando o ambiente para integração futura com PHP e aplicações web.
+
+**Interagindo** com o Repositório 👇✅⌨️:
+ARQUIVO SCHEMA.SQL:
+    Contém os scripts e estruturas das tabelas
+ARQUIVO DATA.SQL:
+    Contém os registros inseridos.
+ARQUIVO QUERIES.SQL:
+    Linhas de comandos para consultas 
