@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel ="icon" href = "Panácea.jpg">
+    <link rel="stylesheet" href = "Style.css">
     <title>Login</title>
 </head>
 <body>
-    <h1>Panácea Software</h1>
-    <img src ="Panácea.png" alt ="Logo Panácea" style ="width:150px;height:150px;"><br><br>
-    <h2>Login</h2>
-    <input type = "text" id = "username" placeholder ="Nome de usuário"><br><br>
-    <input type = "password" id = "password" placeholder ="Senha"><br><br>
-    <button onclick = "login()">Entrar</button>
-    <button onclick = "window.location.href = 'Cadastro.html'">Cadastrar</button><br><br>
-
-        <script>
-            function login(Login){
-            var user = document.getElementById("username").value;
-            var pass = document.getElementById("password").value;
-            }
-            if(user === "admin" && pass === "1234"){
-                alert("Login bem-sucedido! Bem-vindo, " + user + ".");
-                window.location.href = "Index.html"; 
-            } else {
-                alert("Nome de usuário ou senha incorretos. Tente novamente.");
-            }
-        </script>
+    <div class ="glass-container">
+        <h2>Login</h2>
+        <form>
+            <div class = "input-group">
+                <input type = "text" required>
+                <label>Usuário</label>
+            </div>
+            <div class = "input-group">
+                <input type ="password" required>
+                <label>Senha</label>
+            </div>
+            <div class = "remember-forgot">
+                <label><input type ="checkbox">Lembrar de mim</label>
+                <a href ="#">Esqueceu a senha?</a>
+            </div>
+            <button type="submit" class ="login-btn">Login</button>
+            <div class ="register-link">
+                <p>Não tem uma conta? <a href ="#">Registrar</a></p>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
