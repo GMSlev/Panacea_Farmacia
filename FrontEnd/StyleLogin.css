@@ -1,0 +1,40 @@
+    @charset "UTF-8";    
+        
+        @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Ultra&display=swap');
+        @font-face {
+            font-family: 'grantham';
+            src: url(fontes/Fonts/grantham\ bold.ttf) format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        
+        }
+        
+        h1 {
+    font-family: "Ultra", serif;
+    font-weight: 200;
+    font-size: 150px;
+    font-style: normal;
+    color: #41BF6D;
+    text-align:justify;
+
+}
+        
+        h2 {  
+    font-family: 'grantham', serif ;
+    font-weight: 200;
+    font-size: 75px;
+    font-style: normal;
+    color: black;
+    text-align:justify;
+}
+    
+
+            input {
+                 background-color: white;
+    width: 400px;
+    padding: 10px;
+    margin-left: auto;
+            }
+    
+            form {margin-left: auto;
+}
