@@ -9,7 +9,7 @@ CREATE TABLE FARMACEUTICO (
     dt_cont DATE NOT NULL
 );
 
-CREATE USUARIOS (
+CREATE TABLE USUARIOS (
     id_user int primary key auto_increment,
     nome varchar(100) not null,
     usuario char (9) not null unique,
