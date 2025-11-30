@@ -84,3 +84,48 @@
     color: #000000;
     font-size: 16px;
 }
+
+login-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #0E5959; 
+    color: white;
+    border: none;
+    border-radius: 90px;
+    cursor: auto;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 25px; 
+    margin-bottom: 15px;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #0E5959; 
+    color: white;
+    border: none;
+    border-radius: 90px;
+    cursor: auto;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 25px; 
+    margin-bottom: 15px;
+}
+
+.remember-forgot label {
+    display: flex; 
+    margin-top: -5px;
+}
+
+
+.remember-forgot {
+
+    text-align: left; 
+  
+}
+
+.remember-forgot a {
+    color: #1822a3;
+    text-decoration: none;
+}
