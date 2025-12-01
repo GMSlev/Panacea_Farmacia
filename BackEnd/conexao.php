@@ -1,15 +1,14 @@
 <?php
-// Aqui define as credenciais de acesso ao banco de dados
-$localhost = "localhost";
+$host = "localhost";
 $user = "root";
 $senha = "";
 $banco = "panacea_farmacia";
 
-// Fiz a conexão do banco de dados usando MySQLi
-$conecta = new mysqli($localhost, $user, $senha, $banco);
+// Criar conexão
+$conecta = new mysqli($host, $user, $senha, $banco);
 
-if($conecta -> conect_error) {
-    die ("Erro na conexão com banco de dados: " . $conecta -> conect_error);
+// Checar conexão
+if ($conecta->connect_error) {
+    die("Falha na conexão: " . $conecta->connect_error);
 }
-$conecta->set_charset("utf8"); 
 ?>
