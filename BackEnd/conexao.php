@@ -1,13 +1,15 @@
 <?php
-$host = "localhost";
-$user = "root";
-$senha = "";
-$banco = "panacea_farmacia";
+require_once 'config.php';
 
-// Criar conexão
-$conecta = new mysqli($host, $user, $senha, $banco);
-
-// Checar conexão
+if (DB_TYPE === 'mysql') {
+    $conecta = new mysqli(HOST_MYSQL, USER_MYSQL, PASS_MYSQL, DBNAME_MYSQL);
+                        // localhost,   root,        "",       panacea_farmacia
+    if ($conecta->connect_error) {
+        die("Falha na conexão: " . $conecta->connect_error);
+    }
+} elseif (DB_TYPE === 'sqlite') {
+    $conecta = new PDO("sqlite:" . DATABASE_SQLITE);
+}
 if ($conecta->connect_error) {
     die("Falha na conexão: " . $conecta->connect_error);
 }

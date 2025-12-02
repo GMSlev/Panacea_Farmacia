@@ -1,18 +1,19 @@
 <?php
-// Define o tipo de banco de dados a ser usado: 'sqlite' ou 'mysql'
-define('DB_TYPE', 'mysql'); // Altere para 'mysql' para usar o MySQL
+
+define('DB_TYPE', 'mysql');
 
 // Config para SQLite
 if (DB_TYPE === 'sqlite') {
-    define("DATABASE_SQLITE", "database.sqlite3");
-} 
-// Config para Mysql
-elseif (DB_TYPE === 'mysql') { 
+    define("DATABASE_SQLITE", "panacea_farmacia.sqlite");
+}
+
+// Config para MySQL
+elseif (DB_TYPE === "mysql") {
+    define("HOST_MYSQL", "localhost");
     define("USER_MYSQL", "root");
     define("PASS_MYSQL", "");
-    define("DBNAME_MYSQL", "test");
-    define("HOST_MYSQL", "localhost");
-} 
+    define("DBNAME_MYSQL", "panacea_farmacia");
+}
 else {
      die("SGBD não definido! <b>" . DB_TYPE."</b>");
  }
