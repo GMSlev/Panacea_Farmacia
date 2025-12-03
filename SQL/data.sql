@@ -62,6 +62,22 @@
       values('Amitriptilina','Antidepressivo','Comprimido','A partir de 12 anos',27.00,'10mg',20);
     insert into REMEDIO(nome,classe,tipo,fx_etaria,preco,concentracao,estoque)
       values('Amitriptilina','Antidepressivo','Comprimido','A partir de 12 anos',35.00,'25mg',69);  
-      
+
+
+-- INSERÇÃO DOS DADOS DOS USUARIOS NA TABELA USUARIOS.
+-- Dados utilizados para exemplo: NOME DO ALUNO, usuario = ra , senha, e-mail ficitício, e data do cadastro do mesmo.
+
+insert into usuarios (id_user,nome,usuario,senha_hash,email,data_cadastro) 
+values 
+( null ,"Akira Moritaka" ,925111877,"senhateste123","akira@teste.com",'2025-12-01'),  
+( null ,"André Mendes" ,925102731,"senhateste123","andre@teste.com",'2025-12-01'),
+( null ,"Bruna Rodrigues" ,925102447,"senhateste123","bruna@teste.com",'2025-12-01'),
+( null ,"Caio de Oliveira" ,925100846,"senhateste123","caio@teste.com",'2025-12-01'),
+( null ,"Gabriel Martinez" ,925106434,"senhateste123","gabriel@teste.com",'2025-12-01'),
+( null ,"João Victor" ,925113592,"senhateste123","joao@teste.com",'2025-12-01'),
+( null ,"Leandro Marc" ,925200567,"senhateste123","leandro@teste.com",'2025-12-01'),
+( null ,"Rafael Moniz" ,925106499,"senhateste123","rafael@teste.com",'2025-12-01'),
+( null ," Theo Viana" ,9251057847,"senhateste123","theo@teste.com",'2025-12-01'),
+( null ,"Vinicius Nascimento" ,925202872,"senhateste123","vinicius@teste.com",'2025-12-01');
  
      
