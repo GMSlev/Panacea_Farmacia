@@ -1,0 +1,88 @@
+@charset "UTF-8";    
+        
+        @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Ultra&display=swap');
+        @font-face {
+            font-family: 'grantham';
+            src: url(fontes/granthamcondensed\ bold.ttf) format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        
+        }
+
+body {
+    color: #ffffff;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0px;
+   
+    
+}
+
+header {
+    padding: 5px;
+    margin-bottom: 0;
+}
+
+img {
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+}
+
+
+h1 {
+    color: #41BF6D;
+    font-family: "Ultra", serif;
+    font-size: 45px;
+    font-weight: 300;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0;
+    
+}
+
+h2 {
+    color: black;
+    font-family: 'grantham', serif ;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 40px;
+
+}
+
+
+nav {
+    margin-bottom: 0px;
+}
+
+
+nav button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 12px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 250px; 
+    border-radius: 5px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav button:hover {
+    background-color: #1ec51e27 !important; /* !important aplicado pois ao passar o mouse 
+    por cima dos botões estava ficando azul e não com a cor que foi colocada */
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    color: #cccccc;
+    background-color: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-size: 0.9em;
+}
+
