@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href = "style.css">
-    <link rel="stylesheet" href = "StyleLogin.css">
+    <link rel="stylesheet" href = "/FrontEnd/style.css">
+    <link rel="stylesheet" href = "/FrontEnd/StyleLogin.css">
+    <link rel ="icon" href = "./FrontEnd/imgs/Panácea.jpg"> 
+
     <title>Login</title>
 </head> 
 <body>
-    <img src="imgs/panacea1.png" alt="imagem panácea">
+    <img src="FrontEnd/imgs/panacea1.png" alt="imagem panácea">
     <h1>panácea</h1>
     <h2 id="principal">software</h2>
     <div class ="glass-container">
         <h2>Login</h2>
-        <form>
+        <form method = "post" action = "FrontEnd/Inicio.html">
             <div class = "input-group">
                 <label>Usuário</label>
                 <input type = "email" required>
@@ -28,7 +30,7 @@
             </div>
             <button type="submit" class ="login-btn">Entrar</button>
             <div class ="register-link">
-                <p>Não tem uma conta? <a href ="cadastro.html">Registrar</a></p>
+                <p>Não tem uma conta? <a href ="./FrontEnd/cadastro.html">Registrar</a></p>
             </div>
         </form>
     </div>
