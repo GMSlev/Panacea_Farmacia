@@ -2,11 +2,10 @@
 const botoes = document.querySelectorAll("button");
 
 // Aplica efeitos a cada botão
-botoes.forEach(btn => {
-
-    // ---------------------------
+botoes.forEach(btn => 
+    
     // Configuração inicial
-    // ---------------------------
+    
     btn.style.position = "relative";
     btn.style.overflow = "hidden";
     btn.style.transition = "all 0.25s ease";
@@ -36,7 +35,7 @@ botoes.forEach(btn => {
     });
 
     
-    // ✨ 2) Animação do hover
+    // 2) Animação do hover
    
     btn.addEventListener("mouseenter", () => {
         btn.style.transform = "scale(1.12)";
@@ -53,7 +52,7 @@ botoes.forEach(btn => {
     });
 
     
-    // 💡 3) Animação texto
+    // 3) Animação texto
     
     btn.addEventListener("mouseenter", () => {
         btn.style.textShadow = "0 0 6px white";
@@ -88,3 +87,4 @@ rippleCSS.textContent = `
     }
 `;
 document.head.appendChild(rippleCSS);
+
