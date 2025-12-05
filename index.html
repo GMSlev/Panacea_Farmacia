@@ -15,14 +15,14 @@
     <h2 id="principal">software</h2>
     <div class ="glass-container">
         <h2>Login</h2>
-        <form method = "post" action = "FrontEnd/Inicio.html">
-            <div class = "input-group">
+        <form method="post" action="./BackEnd/autenticacao.php">
+            <div class="input-group">
+                <input type="usuario" name="usuario" id="usuario" required>
                 <label>Usuário</label>
-                <input type = "email" required>
             </div>
-            <div class = "input-group">
+            <div class="input-group">
+                <input type="password" name="senha" id="senha" required>
                 <label>Senha</label>
-                <input type ="password" required>
             </div>
             <div class = "remember-forgot">
                 <label><input type ="checkbox">Lembrar de mim</label>
