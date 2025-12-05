@@ -1,25 +1,23 @@
-💾 Modelagem do Banco de Dados — [Panacea_Farmacia]
+Panácea — Sistema para Drogarias
+Projeto integrado desenvolvido para a disciplina de Programação – UNINOVE. O sistema Panácea tem como objetivo oferecer uma solução segura para drogarias, utilizando autenticação de múltiplos fatores, cadastros organizados e controle eficiente de dados e estoque.
 
-Este repositório faz parte do projeto desenvolvido para a disciplina de [Projeto de Extensão em Programação. UNINOVE]. O objetivo é criar, estruturar e testar um banco de dados relacional utilizando MySQL, abordando desde a modelagem até consultas SQL práticas.
+Objetivo:
+Criar um software completo para drogarias, integrando front-end, back-end e banco de dados, com foco em segurança da informação e gerenciamento de medicamentos.
 
-📚 Conteúdo
+Conteúdo do Repositório:
+Front-end: telas desenvolvidas em HTML, CSS e JavaScript
+Back-end: funcionalidades em PHP com integração ao banco de dados
+Banco de Dados: scripts SQL de criação, inserção e consultas (schema.sql, data.sql, queries.sql)
 
-Scripts de criação de tabelas (schema.sql)
+Tecnologias e  Ferramentas Utilizadas:
+HTML5, CSS3, JavaScript, PHP, MySQL, PDO, MySQLi,
+phpMyAdmin, Workbench, VS Code, GitHub, Canva, OneCompiler, WampServer
 
-Inserção e manipulação de dados (data.sql)
-
-Consultas e testes (queries.sql)
-
-Documentação e anotações sobre o desenvolvimento
-
-🚀 Objetivo
-
-Aplicar conceitos de modelagem, normalização e manipulação de dados em SQL, preparando o ambiente para integração futura com PHP e aplicações web.
-
-**Interagindo** com o Repositório 👇✅⌨️:
-ARQUIVO SCHEMA.SQL:
-    Contém os scripts e estruturas das tabelas
-ARQUIVO DATA.SQL:
-    Contém os registros inseridos.
-ARQUIVO QUERIES.SQL:
-    Linhas de comandos para consultas 
+Funcionalidades Principais:
+Login e autenticação;
+Cadastro de clientes, usuários e medicamentos;
+Consultas diversas;
+Emissão de relatórios;
+Controle de estoque;
+Configurações de usuário;
+Logout seguro;
