@@ -9,10 +9,13 @@
 <body>
     <h1>Cadastro</h1>
       <p>Aqui você pode realizar cadastro</p>
-    <form action="cadastro.php" method="POST">
+    <form method="POST" action="/BackEnd/cadastro.php">
 
         <label for ="nome">Nome:</label>
         <input type = "nome" name = "nome" id="nome" required><br><br>
+
+        <label for="usuario">Usuário:</label>
+        <input type="usuario" name="usuario" id="usuario" required><br><br>
 
         <label for ="senha">Senha:</label>
         <input type="password" name="senha" id="senha" requires><br><br>
@@ -25,7 +28,7 @@
 
         <input type="submit" value="Cadastrar">
     </form>
-        <button onclick = "window.location.href = 'index.html'">Voltar para página inicial</button>
+        <button onclick = "window.location.href = '../index.html'">Voltar para página inicial</button>
     <footer style ="text-align: center;">
       <p>© 2025 Panácea. Todos os direitos reservados.</p>
     </footer>

@@ -1,6 +1,6 @@
 <?php
 
-define('DB_TYPE', 'mysql');
+define('DB_TYPE', 'sqlite');
 
 // Config para SQLite
 if (DB_TYPE === 'sqlite') {

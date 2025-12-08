@@ -15,27 +15,28 @@ $dataCadastro = $_POST['data'] ?? '';
                                                        // se ss, ele exibe a mensagem e encerra o processamento
     }
 
-$verificaEmail = $conecta->prepare("SELECT id_user FROM USUARIOS WHERE email = ?"); // prepara o comando SQL de consultar no banco de dadaos a coluna email
-$verificaEmail->bind_param("s", $email); // vincula o parâmetro de email ao comando SQL, indicando que é uma string ("s").
-$verificaEmail->execute(); // roda o comando sql que no caso é a consulta (SELECT)!!
-$verificaEmail->store_result(); // ao finalizar a consulta, ele armazena o valor para a variável $verificaEmail.
+$verificaEmail = $conecta->prepare("SELECT id_user FROM USUARIOS WHERE email = ?");
+$verificaEmail->execute([$email]); // Executa e passa o parâmetro diretamente
+$total_encontrado = $verificaEmail->rowCount(); // Conta o número de linhas
 
-// a estrutura acima verifica se o email já está cadastrado no banco de dados
-
-if ($verificaEmail->num_rows > 0) { // aqui ele verifica as linhas na tabela do banco de dados que ja possuem o email informado
-    die("Este usuário já está cadastrado no sistema.<br><p>Voltar para <a href='../FrontEnd/cadastro.html'>Cadastro</a></p>");
+if ($total_encontrado > 0) { 
+    die("Erro: Este usuário já está cadastrado no banco de dados.");
 }
 
 $senhaHash = password_hash($senha, PASSWORD_DEFAULT); // transforma a senha em método criptografado
 
 $dataCadastro = date("Y-m-d");
 
-$inserirDados = $conecta->prepare("
-    INSERT INTO USUARIOS (nome, usuario, senha_hash, email, data_cadastro)
-    VALUES (?, ?, ?, ?, ?) 
-"); // da mesma maneira que a consulta, aqui ele prepara o comando SQL para inserir os dados no banco de dados
+$inserirDados = $conecta->prepare("INSERT INTO USUARIOS (nome, usuario, senha_hash, email, data_cadastro) 
+VALUES (:nome, :usuario, :senha_hash, :email, :data_cadastro)");
 
-$inserirDados->bind_param("sssss", $nome, $usuario, $senhaCriptografada, $email, $dataCadastro);
+// Bind usando parâmetros nomeados (o que você está fazendo)
+$inserirDados->bindParam(':nome', $nome);
+$inserirDados->bindParam(':usuario', $usuario);
+$inserirDados->bindParam(':senha_hash', $senhaHash); // Nome correto é 'senha_hash' no SQL
+$inserirDados->bindParam(':email', $email);
+$inserirDados->bindParam(':data_cadastro', $dataCadastro);
+
 
 if ($inserirDados->execute()) { // executa o comando SQL de inserção (INSERT)
     echo "<h3>Funcionário cadastrado com sucesso!</h3>";
@@ -44,9 +45,11 @@ if ($inserirDados->execute()) { // executa o comando SQL de inserção (INSERT)
     echo "Usuário gerado: <b>$usuario</b><br>";
     echo '<p>Iniciar Sessão <a href="../index.html">Fazer login</a></p>'; // apos cadastro mostra os dados e link para login
 } else {
-    echo "Erro ao cadastrar: " . $conecta->error; // caso aconteca algum erro na inserção ou conexão, ele exibe a mensagem de erro
+    $erroInfo = $InserirDados->errorInfo();
+echo "Erro ao cadastrar: " . $erroInfo[2]; // caso aconteca algum erro na inserção ou conexão, ele exibe a mensagem de erro
     
 }
 
-$conecta->close();
+$conecta=null();
+
 ?>
