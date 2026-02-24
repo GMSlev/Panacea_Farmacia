@@ -15,10 +15,10 @@ $dataCadastro = $_POST['data'] ?? '';
                                                        // se ss, ele exibe a mensagem e encerra o processamento
     }
 
-$verificaEmail = $conecta->prepare("SELECT id_user FROM USUARIOS WHERE email = ?"); // prepara o comando SQL de consultar no banco de dadaos a coluna email
-$verificaEmail->bind_param("s", $email); // vincula o parâmetro de email ao comando SQL, indicando que é uma string ("s").
-$verificaEmail->execute(); // roda o comando sql que no caso é a consulta (SELECT)!!
-$verificaEmail->store_result(); // ao finalizar a consulta, ele armazena o valor para a variável $verificaEmail.
+    $verificaEmail = $conecta->prepare("SELECT id_user FROM USUARIOS WHERE email = ?"); // prepara o comando SQL de consultar no banco de dadaos a coluna email
+    $verificaEmail->bind_param("s", $email); // vincula o parâmetro de email ao comando SQL, indicando que é uma string ("s").
+    $verificaEmail->execute(); // roda o comando sql que no caso é a consulta (SELECT)!!
+    $verificaEmail->store_result(); // ao finalizar a consulta, ele armazena o valor para a variável $verificaEmail.
 
 // a estrutura acima verifica se o email já está cadastrado no banco de dados
 
@@ -28,7 +28,7 @@ if ($verificaEmail->num_rows > 0) { // aqui ele verifica as linhas na tabela do 
 
 $senhaHash = password_hash($senha, PASSWORD_DEFAULT); // transforma a senha em método criptografado
 
-$dataCadastro = date("Y-m-d");
+$dataCadastro = date("d-m-Y");
 
 $inserirDados = $conecta->prepare("
     INSERT INTO USUARIOS (nome, usuario, senha_hash, email, data_cadastro)
