@@ -3,34 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
- <link rel ="stylesheet" href ="style.css">
+    <link rel="stylesheet" href="stylecadastro.css"> <title>Cadastro - Panácea</title>
 </head>
 <body>
-    <h1>Cadastro</h1>
-      <p>Aqui você pode realizar cadastro</p>
-    <form action="cadastro.php" method="POST">
 
-        <label for ="nome">Nome:</label>
-        <input type = "nome" name = "nome" id="nome" required><br><br>
+    <div class="form">
+        <h1 class="tl">Cadastro</h1>
+        <p id="PRAGF1">Faça seu cadastro para criar o seu usuario no nosso sistema!</p>
+        
+        <form action="cadastro.php" method="POST">
+            <div class="grupo">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="Coloque seu nome completo" required>
+            </div>
 
-        <label for="usuario">Usuário:</label>
-        <input type="usuario" name="usuario" id="usuario" required><br><br>
+            <div class="grupo">
+                <label for="usuario">Usuário:</label>
+                <input type="text" name="usuario" id="usuario" placeholder="Nome de usuário" required>
+            </div>
 
-        <label for ="senha">Senha:</label>
-        <input type="password" name="senha" id="senha" requires><br><br>
+            <div class="grupo">
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
+            </div>
 
-        <label for = "email">E-mail:</label>
-        <input type = "email" name = "email" id="email" requires><br><br>
+            <div class="grupo">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="Digite seu email" required>
+            </div>
 
-        <label for="data">Data de Cadastro:</label>
-        <input type="date" name="data" id="data" value="<?php echo date('d-m-y'); ?>" required><br><br>
+            <div class="grupo">
+                <label for="data">Data de Cadastro:</label>
+                <input type="date" name="data" id="data" value="<?php echo date('Y-m-d'); ?>" required>
+            </div>
 
-        <input type="submit" value="Cadastrar">
-    </form>
-        <button onclick = "window.location.href = '../index.html'">Voltar para página inicial</button>
-    <footer style ="text-align: center;">
-      <p>© 2025 Panácea. Todos os direitos reservados.</p>
+            <div class="botoes">
+                <input type="submit" value="Cadastrar">
+                <button type="button" onclick="window.location.href = '../index.html'">Voltar</button>
+            </div>
+        </form>
+    </div>
+
+    <footer class="DIREITO">
+        <p>&copy; 2025 Panácea. Todos os direitos reservados.</p>
     </footer>
+
 </body>
 </html>
