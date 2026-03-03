@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+/*Aplica todas as regras para os elementos da página*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    font-family: sans-serif;
+}
+/*Estilo do corpo da página, centralizando o conteúdo e aplicando um gradiente de fundo*/
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;
+    background-image: linear-gradient(to right, #0E5959, #4C6A52, #8C7F56);
+}
+/*Estilo do formulário, definindo largura máxima, cor de fundo, padding, borda arredondada e sombra*/
+.form {
+    width: 100%;
+    max-width: 600px; 
+    background-color: #1a4d4d; 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    color: white;
+}
+/*Estilo do texto do formulario (só o <p> e o titulo) */
+.tl, #PRAGF1 {
+    text-align: center;
+    width: 100%;
+}
+/*Estilo dos direitos autorais*/
+.DIREITO {
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+}
+/*Estilo dos inputs do cadastro*/
+.grupo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.grupo input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0E5959;
+    box-shadow: 0 0 5px rgba(14,89,89,0.4);
+}
+/*Botoes estilizados*/
+.botoes {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.botoes input[type="submit"], 
+.botoes button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="submit"] { background-color: #0e5959; color: white; }
+.botoes button { background-color: #ffffff; color: #1a4d4d; }
