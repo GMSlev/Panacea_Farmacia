@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estoque</title>
+    <link rel="stylesheet" href="estoque.css">
+</head>
+<body>
+    <h1>Medicamentos</h1>
+        <p>Cadastre ou consulte seu medicamento aqui.</p>
+        <br>
+    <form action="medicamentos.php" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome"placeholder="Nome do medicamento aqui"> <br><br>
+    
+    <label for="classe">Classe do medicamento:</label>
+        <select id="classe" name="classe">
+        <option value="antihipertensivo">Antihipertensivo</option>
+        <option value="antiulceroso">Antiulceroso </option>
+        <option value="analgésico">Analgésico</option>
+        <option value="antipsicótico">Antipsicótico</option>
+        <option value="antibiótico">Antibiótico</option>
+        <option value="antidepressivo">Antidepressivo</option>
+        <option value="outros">Outros</option>
+    </select><br><br>
 
+     <label for="tipo">Risco:</label>
+        <select id="tipo" name="tipo">
+        <option value="livre">Tarja Livre</option>
+        <option value="vermelha">Tarja Vermelha</option>
+        <option value="amarela">Tarja Amarela</option>
+        <option value="preta">Tarja Preta</option>   
+    </select><br><br>
+
+     <label for="fx_etaria">Faixa etária:</label>
+        <select id="fx_etaria" name="fx_etaria">
+        <option value="infantil">Infantil</option>
+        <option value="juvenil">Juvenil</option>
+        <option value="adulta">Adulta</option>
+        <option value="idoso">Idoso</option>   
+        <option value="livre">Livre</option>
+    </select><br><br>
+
+    <label>Concentração:</label><br>
+        <input type="text" name="concentracao" placeholder="Ex: 500mg"><br><br>
+
+    
+    <label>Estoque:</label><br>
+        <input type="number" name="estoque" placeholder="Ex: 100"><br><br>
+
+    <label>Preço:</label><br>
+        <input type="number" step="0.01" name="preco"
+        placeholder="Ex: 12.50"><br><br>
+    
+    
+    <button type="submit">Enviar</button>  
+
+    
+    </form>
+    
+    
+</body>
+</html>
